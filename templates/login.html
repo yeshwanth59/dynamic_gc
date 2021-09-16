@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container mt-4">
+    <div class="col-lg-6  col-md-8 mx-auto ui segment p-4">
+        <h1 class="display-6"> LoginForm </h1>
+        <br>
+        <form class="ui form" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ my_form|crispy }}
+            <button  type="submit" class="btn btn-primary" >Login</button>
+            <h3> New User? Please Signup Here</h3>
+
+            <a href="/signup" class="btn btn-warning">Signup</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

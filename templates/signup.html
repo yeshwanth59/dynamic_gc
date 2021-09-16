@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="ui form">
+    <div class="container mt-4">
+        <div class="col-lg-6  col-md-8 mx-auto ui segment p-4">
+            <h1 class="display-6" align="center" style="color:teal;"> SignupForm </h1>
+            <br>
+            <form class="ui form" method="post">
+                {% csrf_token %}
+                <h3 style="color:tomato;">
+                {{ form.as_p }}</h3>
+                 <button  type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

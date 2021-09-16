@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h2>List of Plots</h2>
+<table class="table table-striped">
+    <thead style="background-color: blue;color: white;">
+    <td>Plot Number</td>
+    <td>Plot Size(SqYards)</td>
+    <td>Status</td>
+    </thead>
+    {% for plot in plot %}
+    <tr>
+        <td>{{plot.plot_num}}</td>
+        <td>{{plot.plot_size}}</td>
+        <td>{{plot.status}}</td>
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

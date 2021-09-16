@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+{% for image in img %}
+<img style="width:1500px;" src="{{image.thumbnails.url}}">
+{% endfor %}
+
+
+{% endblock %}
